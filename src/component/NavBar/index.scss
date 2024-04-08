@@ -13,6 +13,9 @@
   align-items: center;
   z-index: 98;
   min-width: 1280px;
+  transition: all .5s ease-in-out;
+  transform: translate(0, 0);
+  opacity: 0;
   .logo-wrapper{
     width: 3.25rem;
     height: 1.72rem;
@@ -32,7 +35,7 @@
     align-items: center;
     margin-left: auto;
   }
-}
+} 
 .logo-wrapper{
   .logo{
     width: 100%;
@@ -122,5 +125,11 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    background: url("../../assets/img/bg.png") no-repeat;
+    background-position: -60px -10px;
+    .text{
+      z-index: 2;
+      white-space: nowrap;
+    }
   }
 }

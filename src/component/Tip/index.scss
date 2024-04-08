@@ -1,0 +1,102 @@
+.pc-tip{
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 0.06rem;
+  color: #c9c9c9;
+  font-size: .18rem;
+  z-index: 3;
+  right: 0px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  .list{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 .6rem;
+    justify-content: space-between;
+    margin: 0.23rem 0;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    background-image: url("~@/assets/img/letter.png");
+    width: 0.13rem;
+    z-index: 2;
+    top: 50%;
+    background-size: 100%;
+    height: 1.03rem;
+    left: 0.94rem;
+    transform: translate(50%, 0);
+    margin-top: -3.5rem;
+  }
+}
+.list {
+  .item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    pointer-events: auto;
+    padding: 0 .1rem;
+    white-space: nowrap;
+
+    .ico{
+      width: 0.48rem;
+      margin-bottom: 0.32rem;
+      display: block;
+    }
+    .ico-hover{
+      width: 0.48rem;
+      margin-bottom: 0.32rem;
+      display: none;
+    }
+    .qr-ico{
+      border-radius: 0.2rem;
+      position: absolute;
+      right: 0.7rem;
+      top: -0.5rem;
+      display: none;
+      width: 1.54rem;
+      margin-bottom: 0.12rem;
+    }
+    &:hover .ico{
+      display: none;
+    }
+    &:hover .ico-hover{
+      display: block;
+    }
+  }
+  .wechat-wrap{
+    position: relative;
+    &:hover .qr-ico{
+      display: block;
+    }
+  }
+}
+.pc-tip {
+  .list{
+    &::before{
+      content: "";
+      position: absolute;
+      width: 0.02rem;
+      height: 5rem;
+      background: rgba(255,255,255,.4);
+      z-index: -1;
+      top: -5.5rem;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      width: 0.02rem;
+      height: 5rem;
+      background: rgba(255,255,255,.5);
+      z-index: -1;
+      bottom: -5.5rem
+    }
+  }
+}

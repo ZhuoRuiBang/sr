@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./index.scss";
 import { ReSize, setSize } from "@/utils/resize";
 import classnames from "classnames";
 
 export default function Index() {
+  const nav = useRef(null);
   useEffect(() => {
     setSize();
     ReSize();
+    nav.current.style.opacity = "1";
   }, []);
   const navList = ["首页", "新闻", "角色", "世界"];
   const [activeIndex, setActiveIndex] = useState(0);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   //切换聚焦
   const clickActive = (index) => {
     setActiveIndex(index);
@@ -21,7 +23,7 @@ export default function Index() {
     console.log(count);
   };
   return (
-    <div className="nav">
+    <div className="nav" ref={nav}>
       <div className="logo-wrapper">
         <img
           className="logo"
@@ -75,7 +77,7 @@ export default function Index() {
           </div>
         </div>
         <div className="btn-order">
-          <div></div>
+          <div className="text">下载游戏</div>
         </div>
       </div>
     </div>

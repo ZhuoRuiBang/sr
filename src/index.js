@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import router from './routes';
 import NavBar from '@/component/NavBar'
+import Mask from '@/component/Mask'
 import { RouterProvider } from 'react-router-dom'
-
+import { register } from "swiper/element/bundle";
+register();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <NavBar />
     <RouterProvider router={router} />
+    <Mask />
   </>
 );
 

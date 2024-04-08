@@ -1,0 +1,103 @@
+.slide1{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .video-bg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #000;
+    video{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-position: center bottom;
+      object-fit: cover;
+    }
+  }
+  .dowload-wrap{
+    position: absolute;
+    left: 1.44rem;
+    bottom: 1.71rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .age{
+    z-index: 3;
+    position: fixed;
+    left: auto;
+    right: 1.34rem;
+    bottom: 1.12rem;
+    width: 1.61rem;
+    height: 2.09rem;
+    cursor: pointer;
+  }
+}
+.dowload-wrap .left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.22rem;
+  .downlaod-qr{
+    width: 1.3rem;
+    margin-right: 0.21rem;
+    cursor: pointer;
+  }
+  .downlaod-cloud{
+    width: 1.3rem;
+    cursor: pointer;
+    &:hover{
+      opacity: .8;
+    }
+  }
+}
+.dowload-wrap .right{
+  display: flex;
+  width: 4.72rem;
+  height: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: -.16rem;
+  flex-grow: 1;
+  .btn-download-item{
+    cursor: pointer;
+    width: 2.28rem;
+    height: .71rem;
+    margin-bottom: .16rem;
+    &:hover{
+    opacity: .8;
+    }
+  }
+}
+.dowload-wrap .play-ico{
+  width: 2.33rem;
+  height: 1.57rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  right: -2.33rem;
+  cursor: pointer;
+}
+.dowload-wrap .info-wrap{
+  font-weight: 400;
+  margin-top: .2rem;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: .2rem;
+  line-height: .3rem;
+}
+.info-wrap .link-wrap{
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  .item{
+    text-decoration: underline;
+    margin-right: .2rem;
+  }
+}
