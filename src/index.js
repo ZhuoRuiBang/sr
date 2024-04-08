@@ -3,17 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import router from './routes';
 import NavBar from '@/component/NavBar'
-import Mask from '@/component/Mask'
 import { RouterProvider } from 'react-router-dom'
+import store from './store';
 import { register } from "swiper/element/bundle";
+import { Provider } from 'react-redux';
 register();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <NavBar />
-    <RouterProvider router={router} />
-    <Mask />
+    <Provider store={store}>
+      <NavBar />
+      <RouterProvider router={router} />
+    </Provider>
   </>
 );
 

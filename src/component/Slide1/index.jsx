@@ -1,6 +1,8 @@
 import React from "react";
 import "./index.scss";
 import classNames from "classnames";
+import { useDispatch } from "react-redux";
+import { showMask } from "@/store/modules/maskStore";
 
 export default function Index() {
   const dowloadImgs = [
@@ -10,6 +12,7 @@ export default function Index() {
     "data:image/png;base64,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",
   ];
   const linkItems = ["隐私政策", "产品功能", "用户协议", "权限列表"];
+  const dispatch = useDispatch();
   return (
     <div className="slide1">
       <div className="video-bg">
@@ -44,7 +47,7 @@ export default function Index() {
             );
           })}
         </div>
-        <div className="play-ico">
+        <div className="play-ico" onClick={() => dispatch(showMask(2))}>
           <img
             src={require("@/assets/img/pv-play.png")}
             className="ico"
@@ -64,8 +67,12 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <img src={require("@/assets/img/age.png")} className={classNames('age')} alt="" />
-      
+      <img
+        src={require("@/assets/img/age.png")}
+        className={classNames("age")}
+        onClick={() => dispatch(showMask(1))}
+        alt=""
+      />
     </div>
   );
 }
