@@ -1,3 +1,4 @@
+import { sky } from "./star-sky";
 
 // 根据页面宽度，计算出字体大小用于做自适应
 export const setSize = () => {
@@ -16,6 +17,7 @@ export const setSize = () => {
 // 监听页面变化
 export const ReSize = () => {
   window.addEventListener('resize', (e) => {
+    sky(window.innerWidth, window.innerHeight)
     // console.log(window.innerHeight);
     setSize()
   })

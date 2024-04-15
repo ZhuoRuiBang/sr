@@ -1,6 +1,7 @@
-import React from "react";
-import './index.scss'
+import React, { useEffect } from "react";
+import "./index.scss";
 
 export default function Index() {
-  return <div className="slide1">666</div>;
+  useEffect(() => {}, []);
+  return <div className="slide2"></div>;
 }
