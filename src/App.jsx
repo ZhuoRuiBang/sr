@@ -15,7 +15,7 @@ function App() {
     sky();
     swiperElRef.current.addEventListener("slidechange", (e) => {
       const [Swiper] = e.detail;
-      console.log(Swiper.activeIndex);
+      //
     });
   }, []);
   return (
@@ -24,6 +24,8 @@ function App() {
         ref={swiperElRef}
         mousewheel={true}
         direction="vertical"
+        effect="fade"
+        fade-effect-cross-fade={true}
       >
         <swiper-slide>
           <Slide1 />

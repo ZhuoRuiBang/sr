@@ -3,7 +3,6 @@ export const sky = (width = window.innerWidth, height = window.innerHeight) => {
     ctx = canvas.getContext("2d"),
     w = (canvas.width = width),
     h = (canvas.height = height),
-    hue = 217,
     stars = [],
     count = 0,
     maxStars = 1400;
@@ -40,9 +39,8 @@ export const sky = (width = window.innerWidth, height = window.innerHeight) => {
   }
 
   function maxOrbit(x, y) {
-    let max = Math.max(x, y),
-      // diameter = Math.round(Math.sqrt(max * max + max * max));//Math.round取整
-      diameter = Math.round(Math.sqrt(x * x + y * y));
+
+    let diameter = Math.round(Math.sqrt(x * x + y * y));
     return diameter / 2; //矩形对角线的一半
   }
 
